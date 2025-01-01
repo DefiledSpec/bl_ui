@@ -36,6 +36,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.CircleProgress,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 50,
@@ -58,6 +59,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.Progress,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 50,
@@ -81,6 +83,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.KeyCircle,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 50,
@@ -103,6 +106,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.KeySpam,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 50,
@@ -126,6 +130,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.NumberSlide,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 50,
@@ -149,6 +154,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.RapidLines,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 50,
@@ -172,6 +178,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.CircleShake,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 50,
@@ -195,6 +202,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.PathFind,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 50,
@@ -218,6 +226,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.Untangle,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 min: 1,
@@ -242,6 +251,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.LightsOut,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 0,
@@ -267,6 +277,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.DigitDazzle,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 4,
@@ -286,6 +297,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.DigitDazzle,
                         iterations: 2,
                         config,
+                        playSound: true
                     });
                 },
                 value: 1234,
@@ -309,6 +321,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.WordWiz,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 4,
@@ -334,6 +347,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.CircleSum,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 4,
@@ -358,6 +372,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.WaveMatch,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 20000,
@@ -384,6 +399,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.MineSweeper,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 20000,
@@ -410,6 +426,7 @@ const SendDebuggers: DebugItem[] = [
                         type: GameType.PrintLock,
                         iterations: 2,
                         config,
+                        playSound: true
                     })
                 },
                 value: 5,

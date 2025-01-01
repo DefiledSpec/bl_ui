@@ -55,6 +55,7 @@ export type TGameParams = {
     type: GameTypeKeys;
     iterations: number;
     config: TGameTypeParams;
+    playSound: boolean;
 }
 
 export type TGameState = TGameParams & {

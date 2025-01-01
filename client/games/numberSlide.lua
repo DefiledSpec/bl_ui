@@ -3,7 +3,7 @@
 ---@param difficulty number The difficulty of the game (1-100)]
 ---@param numberOfKeys number The amount of keys to press
 ---@return boolean
-local function numberSlide(iterations, difficulty, numberOfKeys)
+local function numberSlide(iterations, difficulty, numberOfKeys, playSound)
     local promise = promise:new()
 
     ---@type KeyDifficultyConfig
@@ -12,7 +12,7 @@ local function numberSlide(iterations, difficulty, numberOfKeys)
         numberOfKeys = numberOfKeys or 5,
     }
 
-    local result = StartGame(GameTypes.numberSlide, iterations, config)
+    local result = StartGame(GameTypes.numberSlide, iterations, config, playSound)
     promise:resolve(result)
 
     return Citizen.Await(promise)

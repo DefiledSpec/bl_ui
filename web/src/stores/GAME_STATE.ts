@@ -29,12 +29,14 @@ export const store = () => {
 
     const methods = {
         start: (data: TGameParams) => {
-            let { type, iterations, config } = data;
+            let { type, iterations, config, playSound } = data;
 
             iterations = iterations || 1;
 
-            GAME_SOUNDS.start.volume = 0.5;
-            GAME_SOUNDS.start.play();
+            if (playSound) {
+                GAME_SOUNDS.start.volume = 0.5;
+                GAME_SOUNDS.start.play();
+            }
 
             GAME_STATE.update(_ => {
                 const active = true;
@@ -43,13 +45,16 @@ export const store = () => {
                     type,
                     iterations,
                     config,
+                    playSound
                 };
             });
         },
 
         finish: (success: boolean = false) => {
-            GAME_SOUNDS.finish.volume = 0.5;
-            GAME_SOUNDS.finish.play();
+            if (GAME_STATE.playSound) {
+                GAME_SOUNDS.finish.volume = 0.5;
+                GAME_SOUNDS.finish.play();
+            }
             GAME_STATE.update(store => {
                 SendEvent(Send.finish, success);
                 const active = false;
@@ -60,6 +65,7 @@ export const store = () => {
         },
 
         playSound: (sound: keyof typeof GAME_SOUNDS) => {
+            if (!GAME_STATE.playSound) return;
             const _sound = GAME_SOUNDS[sound];
             _sound.volume = 0.5;
             _sound.currentTime = 0;

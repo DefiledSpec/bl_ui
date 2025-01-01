@@ -3,7 +3,7 @@
 ---@param difficulty number The difficulty of the game (1-100)]
 ---@param numberOfKeys number The amount of keys to break
 ---@return boolean
-local function circleShake(iterations, difficulty, numberOfKeys)
+local function circleShake(iterations, difficulty, numberOfKeys, playSound)
     local promise = promise:new()
 
     ---@type KeyDifficultyConfig
@@ -12,7 +12,7 @@ local function circleShake(iterations, difficulty, numberOfKeys)
         numberOfKeys = numberOfKeys or 5,
     }
 
-    local result = StartGame(GameTypes.circleShake, iterations, config)
+    local result = StartGame(GameTypes.circleShake, iterations, config, playSound)
     promise:resolve(result)
 
     return Citizen.Await(promise)

@@ -31,7 +31,7 @@ end
 ---@param gameType string The type of game to start
 ---@param iterations number The amount of iterations to run
 ---@param config MainFunctionConfig config for the game
-function StartGame(gameType, iterations, config)
+function StartGame(gameType, iterations, config, playSound)
     assert(isUILoaded(), 'UI loading timeout')
 
     if not gameType then
@@ -51,6 +51,7 @@ function StartGame(gameType, iterations, config)
         type = gameType,
         iterations = iterations or 1,
         config = config,
+        playSound = playSound ~= nil and playSound or Config.DefaultPlaySound,
     })
 
     local configInput = Config.KeepGameInput[gameType]

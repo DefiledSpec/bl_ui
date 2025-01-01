@@ -3,7 +3,7 @@
 ---@param difficulty number The difficulty of the game (1-100)]
 ---@param numberOfLines number The amount of keys to press
 ---@return boolean
-local function rapidLines(iterations, difficulty, numberOfLines)
+local function rapidLines(iterations, difficulty, numberOfLines, playSound)
     local promise = promise:new()
 
     ---@type KeyDifficultyConfig
@@ -12,7 +12,7 @@ local function rapidLines(iterations, difficulty, numberOfLines)
         numberOfKeys = numberOfLines or 5,
     }
 
-    local result = StartGame(GameTypes.rapidLines, iterations, config)
+    local result = StartGame(GameTypes.rapidLines, iterations, config, playSound)
     promise:resolve(result)
 
     return Citizen.Await(promise)

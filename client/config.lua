@@ -1,5 +1,8 @@
 Config = {}
 
+-- Default option for playing sound. You can pass true or false as the last param for any minigame to overwrite this.
+Config.DefaultPlaySound = true
+
 GameTypes = {
     circleProgress = "CircleProgress",
     progress = "Progress",
